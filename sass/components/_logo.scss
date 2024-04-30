@@ -1,0 +1,26 @@
+.logo {
+  color: $buttonFirstColor;
+  font-family: $secondaryFont;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.logo--mr93 {
+  margin-right: 93px;
+}
+
+.logo--black {
+  color: black;
+}
+
+.logo--mr0 {
+  margin-right: 0;
+}
+
+.logo--white {
+  color: $mainColor;
+  margin-right: 0;
+}

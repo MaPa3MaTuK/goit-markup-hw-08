@@ -1,0 +1,48 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.buttons__filter-item {
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.buttons__filter {
+  background-color: $buttonThirdColor;
+  color: $secondColor;
+  border: none;
+  padding: 6px 22px;
+  border-radius: 4px;
+  @include transition(color);
+  @include transition(background-color);
+  @include transition(box-shadow);
+
+  &:is(:hover, :focus) {
+    background-color: $buttonFirstColor;
+    color: $mainColor;
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+      0 3px 1px 0 rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+}
+
+.buttons__filter-main {
+  background-color: $buttonFirstColor;
+  color: $mainColor;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
+  &:is(:hover, :focus) {
+    background-color: $buttonFirstColor;
+    color: $mainColor;
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+      0 3px 1px 0 rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+}

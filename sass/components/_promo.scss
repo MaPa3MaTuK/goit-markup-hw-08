@@ -1,0 +1,33 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-right: 93px;
+}
+
+.promo__promotion {
+  font-family: $primaryFont;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $mainColor;
+  margin-bottom: 20px;
+}
+
+.promo .social-list {
+  margin-left: 0;
+  margin-right: 0;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.promo .social-list__link {
+  background-color: rgba(255, 255, 255, 0.1);
+  &:is(:hover, :focus) {
+    background-color: $buttonFirstColor;
+  }
+}
+
+.promo .social-list__icon {
+  fill: $mainColor;
+}

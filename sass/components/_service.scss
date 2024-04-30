@@ -1,0 +1,81 @@
+.service {
+  list-style-type: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service__projects {
+  background-color: $mainColor;
+
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.service__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.service__descr {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+
+  transform: translateY(+101%);
+
+  @include transition(transform);
+
+  font-size: 18px;
+  line-height: 1.55556;
+  color: $mainColor;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  .service__item:hover &,
+  .service__item:focus & {
+    transform: translateY(0);
+  }
+}
+
+.service__item {
+  display: block;
+  text-decoration: none;
+  @include transition(box-shadow);
+
+  &:is(:hover, :focus) {
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16),
+      0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    outline: none;
+  }
+}
+
+.service__photo {
+  width: 370px;
+}
+
+.service__des-project {
+  padding: 20px 24px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.service__name {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $secondColor;
+}
+
+.service__works {
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: $thirdCOlor;
+}

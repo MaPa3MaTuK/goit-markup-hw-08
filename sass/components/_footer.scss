@@ -1,0 +1,58 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #2f303a;
+  color: $mainColor;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.footer__contacts {
+  margin-right: 94px;
+}
+
+.footer__address {
+  margin-bottom: 9px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $mainColor;
+}
+
+.footer__phone-number {
+  display: block;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  @include transition(color);
+
+  &:is(:hover, :focus) {
+    cursor: pointer;
+    color: $buttonFirstColor;
+  }
+}
+
+.footer__email {
+  display: block;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  @include transition(color);
+  margin-right: 9px;
+
+  &:is(:hover, :focus) {
+    cursor: pointer;
+    color: $buttonFirstColor;
+  }
+}

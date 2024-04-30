@@ -1,0 +1,26 @@
+.subscription__promo {
+  text-transform: uppercase;
+  color: $mainColor;
+  margin-bottom: 20px;
+}
+
+.subscription__input-btn {
+  display: flex;
+  gap: 12px;
+}
+
+.subscription__input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  box-shadow: $primaryShadow;
+  background: rgba(33, 150, 243, 0);
+  padding: 15px;
+  outline: none;
+  color: $buttonThirdColor;
+  @include transition(border);
+  &:focus {
+    border: 1px solid $buttonFirstColor;
+  }
+}

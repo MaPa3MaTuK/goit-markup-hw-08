@@ -1,0 +1,25 @@
+%btn {
+  display: block;
+  background-color: $buttonFirstColor;
+  color: $mainColor;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  text-align: center;
+  border: none;
+  box-shadow: $primaryShadow;
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $buttonSecondColor;
+    box-shadow: $primaryShadow;
+    outline: none;
+  }
+}
