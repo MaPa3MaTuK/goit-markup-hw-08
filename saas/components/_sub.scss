@@ -1,0 +1,57 @@
+.subscription {
+  @media screen and (min-width: 768px) {
+    margin-left: 166px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+  }
+}
+
+.subscription__promo {
+  text-transform: uppercase;
+  color: $mainColor;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
+}
+
+.subscription__input-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+
+.subscription__input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  // width: 450px;
+  // height: 50px;
+  box-shadow: $primaryShadow;
+  background: rgba(33, 150, 243, 0);
+  padding: 15px;
+  outline: none;
+  color: $buttonThirdColor;
+  @include transition(border);
+  &:focus {
+    border: 1px solid $buttonFirstColor;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 50px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+}

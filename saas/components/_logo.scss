@@ -1,0 +1,33 @@
+.logo {
+  color: $buttonFirstColor;
+  font-family: $secondaryFont;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+  }
+}
+
+.logo--mr72-93 {
+  @media screen and (min-width: 768px) {
+    margin-right: 72px;
+  }
+  // margin-right: 93px;
+}
+
+.logo--black {
+  color: black;
+}
+
+.logo--mr0 {
+  margin-right: 0;
+}
+
+.logo--white {
+  color: $mainColor;
+  margin-right: 0;
+}

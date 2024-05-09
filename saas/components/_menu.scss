@@ -1,0 +1,113 @@
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 999;
+  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.icon-cross {
+  .menu-button & {
+    display: block;
+  }
+  .menu-button:is(:hover, :focus) & {
+    fill: $buttonFirstColor;
+  }
+  .menu-button.is-open & {
+    display: none;
+  }
+}
+
+.icon-menu {
+  .menu-button & {
+    display: none;
+  }
+  .menu-button.is-open & {
+    display: block;
+  }
+  .menu-button.is-open:is(:hover, :focus) & {
+    fill: $buttonFirstColor;
+  }
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  min-width: 480px;
+  width: 100vw;
+  height: 100vh;
+  background-color: $mainColor;
+  padding: 48px 40px;
+  text-align: center;
+  //   font-size: 40px;
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    position: static;
+    height: auto;
+    width: auto;
+    padding: 0;
+    z-index: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 96px;
+
+    // min-width: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 315px;
+  }
+}
+
+.contacts__social {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-social {
+  display: flex;
+}
+
+.menu-social__link {
+  margin: 0;
+  padding: 0px 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22222;
+  letter-spacing: 0.02em;
+
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  margin-top: 32px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+.menu-social__cont {
+  color: $buttonFirstColor;
+  .menu-social__link:is(:hover, :focus) & {
+    color: $buttonSecondColor;
+  }
+}

@@ -20,45 +20,79 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <a class="logo logo--mr93" lang="en" href="./index.html">
-          Web<span class="logo--black">Studio</span></a
-        >
-        <nav>
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a
-                class="site-nav__link site-nav__link--current"
-                href="./index.html"
-              >
-                Студія
-              </a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="">Контакти</a>
-            </li>
-          </ul>
+        <nav class="nav">
+          <a class="logo logo--mr72-93" lang="en" href="./index.html">
+            Web<span class="logo--black">Studio</span></a
+          >
+          <button
+            type="button"
+            class="menu-button is-open"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="menu-container"
+          >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use
+                class="icon-cross"
+                href="./images/sprite.svg#close_40px"
+              ></use>
+              <use class="icon-menu" href="./images/sprite.svg#menu_40px"></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a
+                  class="site-nav__link site-nav__link--current"
+                  href="./index.html"
+                >
+                  Студія
+                </a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="">Контакти</a>
+              </li>
+            </ul>
+
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a class="contacts__link" href="mailto:info@devstudio.com"
+                  ><svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+380961111111"
+                  ><svg class="contacts__icon" width="10" height="12">
+                    <use href="./images/sprite.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="contacts__social">
+                <ul class="menu-social">
+                  <li class="menu-social__link">
+                    <a class="menu-social__cont" href="">Instagram</a>
+                  </li>
+                  <li class="menu-social__link">
+                    <a class="menu-social__cont" href="">Twitter</a>
+                  </li>
+                  <li class="menu-social__link">
+                    <a class="menu-social__cont" href="">Facebook</a>
+                  </li>
+                  <li class="menu-social__link">
+                    <a class="menu-social__cont" href="">Linkedin</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </nav>
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com"
-              ><svg class="contacts__icon" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111"
-              ><svg class="contacts__icon" width="10" height="12">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
     <main>
@@ -129,34 +163,54 @@
           <ul class="skills__images">
             <li class="skills__photo">
               <div class="skills__thumb">
-                <img
-                  src="./images/metier_1.jpg"
-                  alt="написання коду"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/metier-1_desktop.jpg    1x,
+                      ./images/metier-1_desktop@2x.jpg 2x
+                    " />
+                  <img
+                    src="./images/metier-1_desktop.jpg"
+                    alt="написання коду"
+                    width="370"
+                    height="294"
+                /></picture>
                 <p class="skills__descr">Десктопні додатки</p>
               </div>
             </li>
             <li class="skills__photo">
               <div class="skills__thumb">
-                <img
-                  src="./images/metier_2.jpg"
-                  alt="написання коду"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/metier-2_desktop.jpg    1x,
+                      ./images/metier-2_desktop@2x.jpg 2x
+                    " />
+
+                  <img
+                    src="./images/metier-2_desktop.jpg"
+                    alt="написання коду"
+                    width="370"
+                    height="294"
+                /></picture>
                 <p class="skills__descr">Мобільні додатки</p>
               </div>
             </li>
             <li class="skills__photo">
               <div class="skills__thumb">
-                <img
-                  src="./images/metier_3.jpg"
-                  alt="написання коду"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/metier-3_desktop.jpg    1x,
+                      ./images/metier-3_desktop@2x.jpg 2x
+                    " />
+
+                  <img
+                    src="./images/metier-3_desktop.jpg"
+                    alt="написання коду"
+                    width="370"
+                    height="294"
+                /></picture>
                 <p class="skills__descr">Дизайнерські рішення</p>
               </div>
             </li>
@@ -168,13 +222,32 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__card">
-              <img
-                class="team__photo"
-                src="./images/team_card_1.jpg"
-                alt="Ігор Дем'яненко, чоловік"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-card-1_mobile.jpg    1x,
+                    ./images/team-card-1_mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)" />
+                <source
+                  srcset="
+                    ./images/team-card-1_tablet.jpg    1x,
+                    ./images/team-card-1_tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)" />
+                <source
+                  srcset="
+                    ./images/team-card-1_desktop.jpg    1x,
+                    ./images/team-card-1_desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)" />
+                <img
+                  class="team__photo"
+                  src="./images/team-card-1_desktop.jpg"
+                  alt="Ігор Дем'яненко, чоловік"
+                  width="450"
+                  height="460"
+              /></picture>
               <div class="team__des-mate">
                 <h3 class="team__teammate">Ігор Дем'яненко</h3>
                 <p lang="en" class="team__proffesion">Product Designer</p>
@@ -228,13 +301,32 @@
               </div>
             </li>
             <li class="team__card">
-              <img
-                class="team__photo"
-                src="./images/team_card_2.jpg"
-                alt="Ольга Рєпіна, жінка"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-card-2_mobile.jpg    1x,
+                    ./images/team-card-2_mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)" />
+                <source
+                  srcset="
+                    ./images/team-card-2_tablet.jpg    1x,
+                    ./images/team-card-2_tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)" />
+                <source
+                  srcset="
+                    ./images/team-card-2_desktop.jpg    1x,
+                    ./images/team-card-2_desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)" />
+                <img
+                  class="team__photo"
+                  src="./images/team-card-2_desktop.jpg"
+                  alt="Ольга Рєпіна, жінка"
+                  width="450"
+                  height="460"
+              /></picture>
               <div class="team__des-mate">
                 <h3 class="team__teammate">Ольга Рєпіна</h3>
                 <p lang="en" class="team__proffesion">Frontend Developer</p>
@@ -288,13 +380,32 @@
               </div>
             </li>
             <li class="team__card">
-              <img
-                class="team__photo"
-                src="./images/team_card_3.jpg"
-                alt="Микола Тарасов, чоловік"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-card-3_mobile.jpg    1x,
+                    ./images/team-card-3_mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)" />
+                <source
+                  srcset="
+                    ./images/team-card-3_tablet.jpg    1x,
+                    ./images/team-card-3_tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)" />
+                <source
+                  srcset="
+                    ./images/team-card-3_desktop.jpg    1x,
+                    ./images/team-card-3_desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)" />
+                <img
+                  class="team__photo"
+                  src="./images/team-card-3_desktop.jpg"
+                  alt="Микола Тарасов, чоловік"
+                  width="450"
+                  height="460"
+              /></picture>
               <div class="team__des-mate">
                 <h3 class="team__teammate">Микола Тарасов</h3>
                 <p lang="en" class="team__proffesion">Marketing</p>
@@ -348,13 +459,32 @@
               </div>
             </li>
             <li class="team__card">
-              <img
-                class="team__photo"
-                src="./images/team_card_4.jpg"
-                alt="Михайло Єрмаков, чоловік"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-card-4_mobile.jpg    1x,
+                    ./images/team-card-4_mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)" />
+                <source
+                  srcset="
+                    ./images/team-card-4_tablet.jpg    1x,
+                    ./images/team-card-4_tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)" />
+                <source
+                  srcset="
+                    ./images/team-card-4_desktop.jpg    1x,
+                    ./images/team-card-4_desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)" />
+                <img
+                  class="team__photo"
+                  src="./images/team-card-4_desktop.jpg"
+                  alt="Михайло Єрмаков, чоловік"
+                  width="450"
+                  height="460"
+              /></picture>
               <div class="team__des-mate">
                 <h3 class="team__teammate">Михайло Єрмаков</h3>
                 <p lang="en" class="team__proffesion">UI Designer</p>
@@ -616,5 +746,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
