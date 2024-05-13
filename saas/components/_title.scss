@@ -17,7 +17,7 @@
     url(../images/header-mobile.jpg);
 
   @media screen and (min-width: 480px) {
-    width: 480px;
+    // width: 480px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -28,7 +28,7 @@
     @media screen and (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      width: 480px;
+      // width: 480px;
       background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.4),
@@ -39,7 +39,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    width: 768px;
+    // width: 768px;
     // height: 400px;
     background-image: linear-gradient(
         to right,
@@ -51,7 +51,7 @@
     @media screen and (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      width: 768px;
+      // width: 768px;
       background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.4),
@@ -61,7 +61,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-      width: 1600px;
+      max-width: 1600px;
 
       background-image: linear-gradient(
           to right,
@@ -73,7 +73,7 @@
       @media screen and (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-        width: 1600px;
+        max-width: 1600px;
 
         background-image: linear-gradient(
             to right,
@@ -108,7 +108,7 @@
 }
 
 .title.section {
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1199px) {
     padding-top: 118px;
     padding-bottom: 118px;
   }

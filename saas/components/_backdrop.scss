@@ -9,6 +9,7 @@
   @include transition(opacity);
   @include transition(visibility);
   visibility: visible;
+  z-index: 888;
 }
 
 .backdrop.is-hidden {
@@ -182,9 +183,9 @@
 
 .form-check__label {
   color: $thirdCOlor;
-  display: flex;
-  align-items: baseline;
-  gap: 5px;
+  // display: flex;
+  // align-items: baseline;
+  // gap: 5px;
   font-size: 12px;
 
   @media screen and (min-width: 1200px) {
