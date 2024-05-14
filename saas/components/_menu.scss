@@ -1,8 +1,9 @@
 .menu-button {
-  position: relative;
+  position: fixed;
   display: inline-flex;
+  right: 0;
   margin: 0;
-  padding: 0;
+  padding: 5px;
   border: none;
   background-color: transparent;
   z-index: 777;
@@ -14,11 +15,12 @@
 }
 
 .icon-cross {
+  @include transition(fill);
   .menu-button & {
     display: block;
     position: absolute;
-    right: 0;
-    top: 0;
+    // right: 0;
+    // top: 0;
     padding: 10px;
   }
   .menu-button:is(:hover, :focus) & {
@@ -30,6 +32,7 @@
 }
 
 .icon-menu {
+  @include transition(fill);
   .menu-button & {
     display: none;
   }
@@ -55,6 +58,7 @@
   text-align: center;
   //   font-size: 40px;
   &.is-open {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -122,6 +126,7 @@
 
 .menu-social__cont {
   color: $buttonFirstColor;
+  @include transition(color);
   .menu-social__link:is(:hover, :focus) & {
     color: $buttonSecondColor;
   }

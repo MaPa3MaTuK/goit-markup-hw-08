@@ -13,12 +13,14 @@
 }
 
 .service__projects {
+  display: block;
   background-color: $mainColor;
-  flex-grow: 1;
+  // flex-grow: 1;
+  // height: 100%;
 
-  &:last-child {
-    flex-grow: 0;
-  }
+  // &:last-child {
+  //   flex-grow: 0;
+  // }
 
   // flex-basis: calc((100% - 30px) / 2);
 }
@@ -49,10 +51,16 @@
   .service__item:focus & {
     transform: translateY(0);
   }
+
+  @media screen and (max-width: 479px) {
+    overflow: auto;
+  }
 }
 
 .service__item {
-  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   @include transition(box-shadow);
 
@@ -83,13 +91,20 @@
   border-bottom: 1px solid #eee;
 
   @media screen and (min-width: 768px) {
-    height: 146px;
+    // height: 146px;
+    // display: flex;
+    // flex-direction: column;
+    flex-grow: 1;
   }
 
   @media screen and (min-width: 1200px) {
     height: auto;
   }
 }
+
+// .service__project--flex-grow {
+//   flex-grow: 2;
+// }
 
 .service__name {
   margin-bottom: 4px;

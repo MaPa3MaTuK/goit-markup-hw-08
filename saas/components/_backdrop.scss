@@ -38,6 +38,10 @@
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
   background: $mainColor;
 
+  // @media screen and (max-width: 479px) {
+  //   height: 560px;
+  // }
+
   @media screen and (min-width: 480px) {
     width: 450px;
   }
@@ -119,6 +123,11 @@
   &:hover {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 479px) {
+    padding: 7px;
+    padding-left: 42px;
+  }
 }
 
 .form-group textarea {
@@ -144,6 +153,10 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 479px) {
+    height: 100px;
   }
 }
 
