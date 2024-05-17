@@ -1,14 +1,26 @@
 .menu-button {
-  position: fixed;
-  display: inline-flex;
-  right: 0;
-  margin: 0;
-  padding: 5px;
+  // position: fixed;
+  // display: inline-flex;
+  // right: 0;
+  // margin: 0;
+  // padding: 5px;
   border: none;
   background-color: transparent;
-  z-index: 777;
-  margin-left: auto;
+  // z-index: 777;
+  // margin-left: auto;
 
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-cross {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: transparent;
+  margin: 25px;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -16,19 +28,23 @@
 
 .icon-cross {
   @include transition(fill);
-  .menu-button & {
-    display: block;
-    position: absolute;
-    // right: 0;
-    // top: 0;
-    padding: 10px;
-  }
-  .menu-button:is(:hover, :focus) & {
+
+  .menu-cross:is(:hover, :focus) & {
     fill: $buttonFirstColor;
   }
-  .menu-button.is-open & {
-    display: none;
-  }
+  // .menu-button & {
+  //   display: block;
+  //   position: absolute;
+  //   // right: 0;
+  //   // top: 0;
+  //   padding: 10px;
+  // }
+  // .menu-button:is(:hover, :focus) & {
+  //   fill: $buttonFirstColor;
+  // }
+  // .menu-button.is-open & {
+  //   display: none;
+  // }
 }
 
 .icon-menu {

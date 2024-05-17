@@ -27,19 +27,33 @@
           <button
             type="button"
             class="menu-button is-open"
-            data-menu-button
+            data-menu-open
             aria-expanded="false"
             aria-controls="menu-container"
           >
             <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-              <use
-                class="icon-cross"
-                href="./images/sprite.svg#close_40px"
-              ></use>
               <use class="icon-menu" href="./images/sprite.svg#menu_40px"></use>
             </svg>
           </button>
           <div class="menu-container" id="menu-container" data-menu>
+            <button
+              type="button"
+              class="menu-cross"
+              data-menu-close
+              aria-expanded="false"
+              aria-controls="menu-container"
+            >
+              <svg
+                width="40"
+                height="40"
+                aria-label="Перемикач мобільного меню"
+              >
+                <use
+                  class="icon-cross"
+                  href="./images/sprite.svg#close_40px"
+                ></use>
+              </svg>
+            </button>
             <ul class="site-nav">
               <li class="site-nav__item">
                 <a

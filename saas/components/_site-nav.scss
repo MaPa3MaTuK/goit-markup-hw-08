@@ -22,9 +22,9 @@
 .site-nav__item {
   @media screen and (min-width: 768px) {
     position: relative;
-  }
+    // }
 
-  @media screen and (min-width: 1200px) {
+    // @media screen and (min-width: 1200px) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -44,9 +44,6 @@
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
-  }
-
-  @media screen and (min-width: 1200px) {
     padding-top: 16px;
     padding-bottom: 16px;
     @include transition(color);
@@ -63,7 +60,7 @@
   }
 }
 .site-nav__link--current::after {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     position: absolute;
     content: "";
     width: 100%;

@@ -27,19 +27,33 @@
           <button
             type="button"
             class="menu-button is-open"
-            data-menu-button
+            data-menu-open
             aria-expanded="false"
             aria-controls="menu-container"
           >
             <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-              <use
-                class="icon-cross"
-                href="./images/sprite.svg#close_40px"
-              ></use>
               <use class="icon-menu" href="./images/sprite.svg#menu_40px"></use>
             </svg>
           </button>
           <div class="menu-container" id="menu-container" data-menu>
+            <button
+              type="button"
+              class="menu-cross"
+              data-menu-close
+              aria-expanded="false"
+              aria-controls="menu-container"
+            >
+              <svg
+                width="40"
+                height="40"
+                aria-label="Перемикач мобільного меню"
+              >
+                <use
+                  class="icon-cross"
+                  href="./images/sprite.svg#close_40px"
+                ></use>
+              </svg>
+            </button>
             <ul class="site-nav">
               <li class="site-nav__item">
                 <a class="site-nav__link" href="./index.html"> Студія </a>
@@ -58,7 +72,9 @@
 
             <ul class="contacts">
               <li class="contacts__item">
-                <a class="contacts__link" href="tel:+380961111111"
+                <a
+                  class="contacts__link contacts__link--smaller"
+                  href="tel:+380961111111"
                   ><svg class="contacts__icon" width="10" height="12">
                     <use href="./images/sprite.svg#smartphone"></use>
                   </svg>
